@@ -22,12 +22,12 @@ img {
 }
 
 ngb-carousel {
-    background-color: rgb(42, 42, 243);
+    background-color: var(--portfolio-accent);
     margin-bottom: 1.3px;
 }
 
 mat-card {
-    background-color: rgb(42, 42, 243);
+    background-color: var(--portfolio-accent);
     text-align: center;
     color: white;
     padding-top: 11px;
@@ -35,22 +35,6 @@ mat-card {
 
 mat-divider {
     background-color: white;
-}
-
-mat-panel-title {
-    color: rgb(42, 42, 243);
-    font-weight: 900;
-    font-size: 21px;
-}
-
-mat-icon {
-    color: rgb(42, 42, 243);
-    font-weight: 900;
-    font-size: 21px;
-}
-
-mat-expansion-panel {
-    margin: 22px 0px;
 }
 
 hr {

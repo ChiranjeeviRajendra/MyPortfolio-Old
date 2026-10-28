@@ -1,4 +1,4 @@
-<ngb-carousel *ngIf="images" [showNavigationIndicators]="showNavigationIndicators">
+<ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
     <ng-template ngbSlide>
         <div class="picsum-img-wrapper">
             <img [src]="images[0]" alt="Random first slide">
@@ -12,7 +12,7 @@
             <img [src]="images[1]" alt="Random second slide">
         </div>
         <div class="imgbox">
-            <p class="p">Excellence in OOP concepts</p>
+            <p class="p">Excellence in OOPs concepts</p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
@@ -51,89 +51,65 @@
 
 <mat-card>
     <h2>Welcome To My Portfolio</h2>
-    <p>Hi! This is Chiranjeevi, an angular developer, not by destiny but by passion</p>
+    <p>Hi! This is Chiranjeevi, a Senior Software Engineer, not by destiny but by passion</p>
     <p>
         This website is designed and built by me to showcase my passion
         for learning technologies and also to endorse the digitalisation era
     </p>
 </mat-card>
 <mat-divider></mat-divider>
-<mat-accordion>
+<mat-accordion class="content-accordion">
     <mat-card>
-        <mat-expansion-panel hideToggle>
+        <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     My Personal Details
                 </mat-panel-title>
-                <mat-panel-description>
-                    <div style="flex-grow: 1;"></div>
-                    <mat-icon>expand_more</mat-icon>
-                </mat-panel-description>
             </mat-expansion-panel-header>
             <app-about-me></app-about-me>
         </mat-expansion-panel>
         <hr>
-        <mat-expansion-panel hideToggle>
+        <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     My Skills
                 </mat-panel-title>
-                <mat-panel-description>
-                    <div style="flex-grow: 1;"></div>
-                    <mat-icon>expand_more</mat-icon>
-                </mat-panel-description>
             </mat-expansion-panel-header>
             <app-skills></app-skills>
         </mat-expansion-panel>
         <hr>
-        <mat-expansion-panel hideToggle>
+        <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     My Experience
                 </mat-panel-title>
-                <mat-panel-description>
-                    <div style="flex-grow: 1;"></div>
-                    <mat-icon>expand_more</mat-icon>
-                </mat-panel-description>
             </mat-expansion-panel-header>
             <app-experience></app-experience>
         </mat-expansion-panel>
         <hr>
-        <mat-expansion-panel hideToggle>
+        <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     My Projects
                 </mat-panel-title>
-                <mat-panel-description>
-                    <div style="flex-grow: 1;"></div>
-                    <mat-icon>expand_more</mat-icon>
-                </mat-panel-description>
             </mat-expansion-panel-header>
             <app-projects></app-projects>
         </mat-expansion-panel>
         <hr>
-        <mat-expansion-panel hideToggle>
+        <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     Education
                 </mat-panel-title>
-                <mat-panel-description>
-                    <div style="flex-grow: 1;"></div>
-                    <mat-icon>expand_more</mat-icon>
-                </mat-panel-description>
             </mat-expansion-panel-header>
             <app-education></app-education>
         </mat-expansion-panel>
         <hr>
-        <mat-expansion-panel hideToggle>
+        <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     Contact Me
                 </mat-panel-title>
-                <mat-panel-description>
-                    <div style="flex-grow: 1;"></div>
-                    <mat-icon>expand_more</mat-icon>
-                </mat-panel-description>
             </mat-expansion-panel-header>
             <app-contact></app-contact>
         </mat-expansion-panel>

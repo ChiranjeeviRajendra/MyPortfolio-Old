@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [MatExpansionModule],
   selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css']
+  templateUrl: './skills.component.html'
 })
-export class SkillsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class SkillsComponent {}

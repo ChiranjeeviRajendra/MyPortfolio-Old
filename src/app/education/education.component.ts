@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [MatCardModule],
   selector: 'app-education',
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.css']
 })
-export class EducationComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class EducationComponent {}

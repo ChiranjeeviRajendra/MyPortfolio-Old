@@ -6,7 +6,7 @@
 }
 
 mat-toolbar {
-    background-color: rgb(42, 42, 243);
+    background-color: var(--portfolio-accent);
     color: white;
 }
 
@@ -14,7 +14,7 @@ mat-sidenav {
     margin: 16px;
     width: 200px;
     border-right: none;
-    background-color: rgb(42, 42, 243);
+    background-color: var(--portfolio-accent);
     color: rgb(255, 255, 255);
     padding: 10px 0px;
     text-align: center;
@@ -30,7 +30,6 @@ mat-sidenav-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: 12px;
     padding: 1px 8px;
 }
 

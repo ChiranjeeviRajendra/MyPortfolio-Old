@@ -1,11 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+/* Shared design tokens and Material styles for every portfolio component. */
+:root {
+  --portfolio-font-family: "MV Boli", Roboto, "Helvetica Neue", sans-serif;
+  --portfolio-text-size: 1rem;
+  --portfolio-heading-size: 1.125rem;
+  --portfolio-heading-weight: 600;
+  --portfolio-accent: rgb(42, 42, 243);
+  --portfolio-surface: #fff;
+  --portfolio-text: #202124;
+  --portfolio-spacing: 16px;
+  --portfolio-radius: 4px;
+}
 
-* {
-  font-family: MV Boli;
+/* Include Material's text elements without replacing its icon font. */
+body,
+button,
+input,
+select,
+textarea,
+.mat-typography,
+.mat-typography :not(mat-icon):not(.material-icons):not(.material-symbols-outlined) {
+  font-family: var(--portfolio-font-family);
+}
+
+.mat-icon.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-size: var(--portfolio-text-size); }
+
+.mat-typography :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: var(--portfolio-heading-weight);
+  line-height: 1.5;
+}
+
+.mat-typography .text-lead,
+.mat-typography .section-heading {
+  font-size: var(--portfolio-heading-size);
+}
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  font-weight: var(--portfolio-heading-weight);
+  opacity: 1;
+}
+
+.menu-button {
+  font-size: var(--portfolio-text-size);
+}
+
+/* Preserve the spacing and rounded cards used before Material's MDC migration. */
+mat-card.mat-mdc-card {
+  display: block;
+  padding: var(--portfolio-spacing);
+  border-radius: var(--portfolio-radius);
+}
+
+/* Reuse this class at each level of a nested accordion, including the home page. */
+.content-accordion {
+  --mat-expansion-container-background-color: var(--portfolio-surface);
+  --mat-expansion-container-text-color: var(--portfolio-text);
+  --mat-expansion-container-shape: var(--portfolio-radius);
+  --mat-expansion-header-text-color: var(--portfolio-accent);
+  --mat-expansion-header-text-font: var(--portfolio-font-family);
+  --mat-expansion-container-text-font: var(--portfolio-font-family);
+  --mat-expansion-header-text-size: var(--portfolio-heading-size);
+  --mat-expansion-header-text-weight: var(--portfolio-heading-weight);
+  --mat-expansion-header-indicator-color: var(--portfolio-accent);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  text-align: left;
+}
+
+.content-accordion .mat-expansion-panel {
+  margin: 0;
+  min-width: 0;
+  border-radius: var(--portfolio-radius);
+}
+
+.content-accordion .mat-expansion-panel-header {
+  height: auto;
+  min-height: 56px;
+  padding: 12px var(--portfolio-spacing);
+}
+
+.content-accordion .mat-expansion-panel-header-title {
+  min-width: 0;
+  color: var(--portfolio-accent);
+  overflow-wrap: anywhere;
+}
+
+.content-accordion .mat-expansion-panel-body {
+  padding: 0 var(--portfolio-spacing) var(--portfolio-spacing);
+}
+
+.mat-typography .accordion-heading {
+  margin: 0;
+  font-size: var(--portfolio-heading-size);
+  font-weight: var(--portfolio-heading-weight);
+  line-height: 1.5;
+}
+
+.content-list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.content-list li + li {
+  margin-top: 6px;
+}
+
+mat-sidenav .menu-button:not(:disabled) {
+  color: inherit;
+}
 
 /* width */
 ::-webkit-scrollbar {

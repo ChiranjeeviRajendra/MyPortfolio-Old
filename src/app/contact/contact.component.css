@@ -10,7 +10,7 @@ img {
 
 hr {
     width: 94%;
-    background-color: rgb(42, 42, 243);
+    background-color: var(--portfolio-accent);
 }
 
 mat-toolbar {

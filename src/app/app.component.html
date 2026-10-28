@@ -1,14 +1,18 @@
 <mat-toolbar>
-    <button class="same" mat-icon-button [disableRipple]="true" *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
-        <mat-icon class="same1" *ngIf="!sidenav.opened">menu</mat-icon>
-        <mat-icon class="same1" *ngIf="sidenav.opened">close</mat-icon>
-    </button>
+    @if (isMobile()) {
+        <button class="same" mat-icon-button [disableRipple]="true" (click)="sidenav.toggle()"
+                [attr.aria-label]="sidenav.opened ? 'Close navigation' : 'Open navigation'"
+                [attr.aria-expanded]="sidenav.opened">
+            <mat-icon class="same1">{{ sidenav.opened ? 'close' : 'menu' }}</mat-icon>
+        </button>
+    }
     <div style="flex-grow: 1;"></div>
     <span routerLink="/home" style="cursor: pointer;">Chiranjeevi</span>
 </mat-toolbar>
 
 <mat-sidenav-container>
-    <mat-sidenav #sidenav="matSidenav" (click)="sidenav.mode === 'over' ? sidenav.toggle() :false">
+    <mat-sidenav #sidenav="matSidenav" [mode]="isMobile() ? 'over' : 'side'" [opened]="!isMobile()"
+                 (click)="isMobile() ? sidenav.close() : false">
         
         <img src="assets/banner2.jpg" alt="image not available">
         <h2 class="name" style="margin-bottom: 2px;">Chiranjeevi</h2>
